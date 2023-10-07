@@ -1,0 +1,48 @@
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* vw是相对于视窗宽度的单位， 1vw=1/100浏览器宽度。 
+   vh是相对于视窗高度的单位， 1vh=1/100浏览器高度。 */
+.container {
+    display: flex;
+    width: 90vw;
+}
+
+/* flex 属性是一个简写属性，用于同时设置 flex-grow、flex-shrink 和 flex-basis 这三个属性。 */
+
+/* 具体来说，flex: 0.5 表示弹性盒子中的子元素将根据可用空间进行伸缩，其中 0.5 表示子元素的伸缩比例。
+这意味着，当弹性容器的空间有限时，该子元素将以比其他子元素更小的比例进行收缩，以适应可用空间。
+当弹性容器有多余的空间时，该子元素将以相应的比例进行扩展。 */
+.container > .panel {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    flex: 0.5;
+    padding: 10px;
+    margin: 10px;
+    color: #fff;
+    border-radius: 50px;
+    transition: flex .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    cursor: pointer;
+    height: 90vh;
+}
+
+.container > .panel > h3 {
+    color:#b9a3a4;
+    font-size: 25px;
+    text-align: center;
+    line-height: 99vh;
+}
+
+.container > .panel.active {
+    flex: 5;
+}
