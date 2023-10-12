@@ -1,0 +1,72 @@
+*{
+	margin: 0;padding: 0;
+	box-sizing: border-box;
+}
+body, html{
+	background-color: #232425;
+	overflow-x: hidden;
+}
+.page-container{
+	transform-origin: left top;
+	width: 100%;
+	min-height: 100vh;
+	background-color: skyblue;
+	transition: transform .4s ease-in-out;
+	padding: 60px;
+}
+/*js addClassList() */
+.page-container.show-nav{
+/*	90deg = 100grad = 0.25turn ≈ 1.570796326794897rad */
+	transform: rotate(-20deg); /*degrees*/
+}
+.page-container>.circle-container>.circle{
+	width:150px;height: 150px;
+	border-radius: 50%;
+	background-color: #2396ef;
+	position: relative;
+/*	 transform 属性发生变化 transform和transition原来可以一起用*/
+	transition: transform .4s ease-in-out;
+}
+/*i的作用是？？*/
+.page-container>.circle-container>.circle i{
+	width: 35px;height: 35px;
+	position:absolute; 
+	top:60%; background-size: 100%;
+	background-repeat: no-repeat;
+	cursor:pointer;
+	z-index: 2;
+}
+.page-container >.circle-container> .circle >.open{
+	background-image: url('./img/close.svg');
+	left: 50%;
+}
+.page-container >.circle-container> .circle >.open_hidden{
+	left: -60%;
+}
+.page-container >.circle-container> .circle >.close{
+	background-image: url('./img/menu.svg');
+}
+.page-container >.circle-container> .circle >.close{
+	transform: rotate(90deg);
+	transform-origin: top left;
+	left: 30%;
+}
+.page-container>.circle-container> .circle i:hover{
+	transform: scale(1.2)
+}
+.page-container .page_content h1{
+	color:coral; font-size: 34px;
+	letter-spacing: 20px;
+}
+.page-container .page_content p{
+	text-indent: 20em;
+	color: blueviolet;
+	line-height: 2;
+	margin-bottom: 15px;
+}
+.page-container .page_content img{
+	border-radius: 15px;
+	width: auto; height: auto;
+/*	不会看不到*/
+	max-width: 100%; max-height: 100%;
+}

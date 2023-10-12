@@ -1,0 +1,33 @@
+
+过渡属性（transition-property）：指定要过渡的 CSS 属性的名称。可以是单个属性，也可以是多个属性。例如：transition-property: width; 或 transition-property: width, height;。
+
+过渡时间（transition-duration）：指定过渡效果的持续时间。可以使用秒（s）或毫秒（ms）作为单位。例如：transition-duration: 0.5s;。
+
+过渡函数（transition-timing-function）：指定过渡效果的时间曲线。它控制过渡期间属性值的变化速度。常见的时间曲线包括线性（linear）、缓入（ease-in）、缓出（ease-out）、缓入缓出（ease-in-out）等。例如：transition-timing-function: ease-in-out;。
+
+过渡延迟（transition-delay）：指定过渡效果开始前的延迟时间。可以使用秒（s）或毫秒（ms）作为单位。例如：transition-delay: 0.2s;。
+
+Code:
+.element {
+  width: 100px;
+  transition-property: width;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0.2s;
+}
+
+.element:hover {
+  width: 200px;
+}
+
+transform.
+2D-->
+scale(x,1)
+scale(1,y)
+scale(x,y)
+translateX(xx)右移动
+translateY(yy)上移动
+translate(xx,yy)右上移动
+rotateX()
+rotateY()
+transform-orgin 旋转基点 + skew(水平倾斜，垂直倾斜)
